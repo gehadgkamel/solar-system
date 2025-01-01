@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const app = express();
 const cors = require('cors')
+require('dotenv').config();
 
 
 app.use(bodyParser.json());
@@ -21,6 +22,7 @@ mongoose.connect(process.env.MONGO_URI, {
         console.log("error!! " + err)
     } else {
       //  console.log("MongoDB Connection Successful")
+      console.log('MongoDB URI:', process.env.MONGO_URI);
     }
 })
 
