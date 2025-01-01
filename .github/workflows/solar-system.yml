@@ -6,7 +6,12 @@ on:
     branches:
       - main
       - 'feature/*'
-    
+
+env:
+  MONGO_USERNAME: ${{vars.MONGO_USERNAME}}
+  MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
+  MONGO_URI: 'mongodb+srv://gegedb:HLBnTVpxLxRf!7_@cluster0.pojvnjp.mongodb.net/?retryWrites=true&w=majority'
+
 jobs:
     unit-testing:
         name: Unit Testing
