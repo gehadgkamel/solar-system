@@ -10,7 +10,7 @@ on:
 env:
   MONGO_USERNAME: ${{vars.MONGO_USERNAME}}
   MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
-  MONGO_URI: 'mongodb+srv://gegedb:HLBnTVpxLxRf!7_@cluster0.pojvnjp.mongodb.net/mydatabase?retryWrites=true&w=majority'
+  MONGO_URI: ${{vars.MONGO_URI}}
 
 jobs:
     unit-testing:
